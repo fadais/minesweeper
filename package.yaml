@@ -1,14 +1,10 @@
 name:                minesweeper
-version:             0.1.0.0
-github:              "githubuser/minesweeper"
-license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2018 Author name here"
+version:             1.0
+github:              https://github.com/fadais/minesweeper
+author:              Fadi Dokmak
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
@@ -35,6 +31,8 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - minesweeper
+    - random
+    - fltkhs
 
 tests:
   minesweeper-test:

@@ -9,7 +9,7 @@ import System.Environment
 import System.Random
 import Data.Ix
 
-version = 0.3
+version = 1.0
 
 
 -- minesweeper field containing all cells
@@ -63,15 +63,15 @@ minesweeper field = do
   -- game over check
   if won f
     then putStrLn "Herzlichen Glückwunsch" -- TODO show all cells
-    else 
+    else
       if lost f
         then putStrLn "Du hast verloren" -- TODO show all cells
         else do
           o <- getOption
           if (o == 1)
-            then minesweeper (clickAction f) 
-            else minesweeper (markAction f) 
-      
+            then minesweeper (clickAction f)
+            else minesweeper (markAction f)
+
 
 -- perform action of clicking on a cell - get Index of cell and "click" it
 clickAction :: Field -> IO Field
