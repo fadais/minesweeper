@@ -60,7 +60,7 @@ main = do
 minesweeper :: IO Field -> IO ()
 minesweeper field = do
   f <- field
-  putStrLn "      0  1  2  3  4  5  6  7  8  9 \n"
+  putStrLn "     0  1  2  3  4  5  6  7  8  9 \n"
   printField f
   -- game over check
   if won f
@@ -108,10 +108,11 @@ lost (x:xs) = if (isMine x) && (isVisible x)
                 then True
                 else lost xs
 
--- true if game is won (all mines are marked)
+-- true if game is won 
 won :: Field -> Bool
 won [] = True
-won (x:xs) = if isMarked x || (not $ isMine x)
+won (x:xs) = if (isMine x && isMarked x) || ((not $ isMine x) && isVisible x)
+             -- if isMarked x || (not $ isMine x)
               then won xs
               else False
 
@@ -231,7 +232,7 @@ convertCell ((i,j), c, v,m) = if m == True
                                         False     -> if j == 0
                                                       then if i > 9
                                                             then (show i) ++ " |  * "
-                                                            else (show i) ++ "  |  * "
+                                                            else (show i) ++ " |  * "
                                                       else
                                                         if j == 9
                                                           then " * \n"
