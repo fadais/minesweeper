@@ -32,7 +32,6 @@ executables:
     dependencies:
     - minesweeper
     - random
-    - fltkhs
 
 tests:
   minesweeper-test:
