@@ -13,6 +13,7 @@ Zum Builden verwenden Sie: stack build
 EXEC
 Nach dem Builden befindet sich die Datei exec im Verzeichnis. Diese kann nun über die Kommandozeile ausgeführt werden.
 
-
 (es kann auch das inst Skript im Verzeichnis genutzt werden, dieses buildet und startet das Spiel direkt)
 
+
+Der Code befindet sich in app/Main.hs
