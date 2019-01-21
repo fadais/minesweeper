@@ -2,27 +2,22 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ea498644a57c8db187da9e86ffce28dc1903c4d02c542cb2c34b7addb096780e
+-- hash: dccd496baee532fd3927693bf82d76f88b29c62a8dc3d34ccd68a44e5e503464
 
 name:           minesweeper
-version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/minesweeper#readme>
-homepage:       https://github.com/githubuser/minesweeper#readme
-bug-reports:    https://github.com/githubuser/minesweeper/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2018 Author name here
-license:        BSD3
-license-file:   LICENSE
+version:        1.0
+description:    Please see the README on GitHub at <https://github.com/fadais/minesweeper#readme>
+homepage:       https://github.com/fadais/minesweeper#readme
+bug-reports:    https://github.com/fadais/minesweeper/issues
+author:         Fadi Dokmak
 build-type:     Simple
 cabal-version:  >= 1.10
 extra-source-files:
-    ChangeLog.md
     README.md
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/minesweeper
+  location: https://github.com/fadais/minesweeper
 
 library
   exposed-modules:
@@ -45,6 +40,7 @@ executable minesweeper-exe
   build-depends:
       base >=4.7 && <5
     , minesweeper
+    , random
   default-language: Haskell2010
 
 test-suite minesweeper-test
